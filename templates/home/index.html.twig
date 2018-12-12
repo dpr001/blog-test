@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1> Last Posts </h1>
+{% for post in posts %}
+    {{ post.id }} <br />
+    {{ post.title }} <br />
+    {{ post.content }} <br />
+    {{ post.publishedat | date('Y-m-d') }} <hr />
+{% endfor %}
+{% endblock %}
